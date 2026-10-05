@@ -1,0 +1,67 @@
+
+=== TC1 minimal defaults ===
+  errors: []
+  warnings: ['You do not yet have an emergency fund. Based on your situation, aim for about 4 months of expenses in a liquid fund before taking market risk.']
+  PASS  TC1 overall alloc sums to 100 for every option
+  PASS  TC1 emergency fund not assessed when expenses present but no stated target gap avoided crash
+  PASS  TC1 required risk label computed without crashing
+
+=== TC2 emergency fund shortfall (self-employed, no buffer) ===
+  errors: []
+  warnings: ['You do not yet have an emergency fund. Based on your situation, aim for about 8 months of expenses in a liquid fund before taking market risk.']
+  PASS  TC2 emergency target uses self-employed months
+  PASS  TC2 top-up amount > 0 since no savings exist
+  PASS  TC2 top-up capped at available amount
+  PASS  TC2 a note about the emergency top-up appears
+  PASS  TC3 high EMI burden warning fires
+  PASS  TC3 SIP-vs-disposable-income warning fires
+
+=== TC3 high EMI burden ===
+  errors: []
+  warnings: ['You do not yet have an emergency fund. Based on your situation, aim for about 4 months of expenses in a liquid fund before taking market risk.', 'Your monthly SIP (Rs 10,000) is more than your disposable income (income minus expenses and EMIs, about Rs 0/month). Consider a smaller SIP, or review your expenses/EMIs.', 'Your EMIs are about 50% of your income, a high debt burden. If any of this debt carries a high interest rate, consider repaying it before increasing investments.']
+  PASS  TC3 high-interest debt note appears
+  PASS  TC3 debt level flagged in financial health
+
+=== TC4a existing equity-heavy (80%) ===
+  errors: []
+  warnings: ['You do not yet have an emergency fund. Based on your situation, aim for about 4 months of expenses in a liquid fund before taking market risk.']
+
+=== TC4b no existing holdings (baseline) ===
+  errors: []
+  warnings: ['You do not yet have an emergency fund. Based on your situation, aim for about 4 months of expenses in a liquid fund before taking market risk.']
+  PASS  TC4 existing-equity-heavy client gets LOWER new-money equity share than baseline
+  PASS  TC4 a note explains the tilt
+
+=== TC5 priority-based funding order ===
+  errors: []
+  warnings: ['You do not yet have an emergency fund. Based on your situation, aim for about 4 months of expenses in a liquid fund before taking market risk.']
+  PASS  TC5 Essential goal gets funded before Aspirational despite same date
+
+=== TC6a flat SIP ===
+  errors: []
+  warnings: ['You do not yet have an emergency fund. Based on your situation, aim for about 4 months of expenses in a liquid fund before taking market risk.']
+
+=== TC6b step-up SIP (10%/yr) ===
+  errors: []
+  warnings: ['You do not yet have an emergency fund. Based on your situation, aim for about 4 months of expenses in a liquid fund before taking market risk.']
+  PASS  TC6 step-up SIP needs a SMALLER first-month contribution than a flat SIP for the same target
+  PASS  TC7 Education-category goal inflates to a HIGHER future target than General for the same cost/years
+
+=== TC8 near-retirement aggressive flag ===
+  errors: []
+  warnings: ['You do not yet have an emergency fund. Based on your situation, aim for about 4 months of expenses in a liquid fund before taking market risk.']
+  PASS  TC8 near-retirement high-equity note appears when viewing Aggressive
+  PASS  TC9 Conservative has a finite Sharpe ratio
+  PASS  TC9 Conservative stress_decline <= bad_year (a stress scenario should be at least as bad)
+  PASS  TC9 Moderate has a finite Sharpe ratio
+  PASS  TC9 Moderate stress_decline <= bad_year (a stress scenario should be at least as bad)
+  PASS  TC9 Aggressive has a finite Sharpe ratio
+  PASS  TC9 Aggressive stress_decline <= bad_year (a stress scenario should be at least as bad)
+
+=== TC10 lumpsum mode ===
+  errors: []
+  warnings: ['You do not yet have an emergency fund. Based on your situation, aim for about 4 months of expenses in a liquid fund before taking market risk.']
+  PASS  TC10 lumpsum plan builds without error and sums to 100
+
+============================================================
+ALL CHECKS PASSED.

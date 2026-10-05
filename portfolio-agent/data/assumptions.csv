@@ -1,0 +1,6 @@
+asset,expected_return,volatility,source
+Liquid Fund,0.060,0.010,PLACEHOLDER - replace with CAGR/volatility computed from your collected data
+Debt Fund,0.070,0.030,PLACEHOLDER - replace with CAGR/volatility computed from your collected data
+Gold,0.080,0.140,PLACEHOLDER - replace with CAGR/volatility computed from your collected data
+Large-cap Equity,0.120,0.170,PLACEHOLDER - replace with CAGR/volatility computed from your collected data (e.g. Nifty 50 TRI)
+Mid-cap Equity,0.140,0.220,PLACEHOLDER - replace with CAGR/volatility computed from your collected data (e.g. Nifty Midcap 150 TRI)

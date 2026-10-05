@@ -1,0 +1,25 @@
+2026-10-04 15:17:09.610 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+PASS: initial load, title: Build your plan around your life.
+PASS: moved to About you
+Checkboxes visible on About you: ['w_has_ret', 'w_sole']
+PASS: moved to Financial life
+Checkboxes visible on Financial life (after EMI>0): ['w_emi_high', 'w_health_ins', 'w_life_ins']
+Checkboxes visible (protection check, deps>0): ['w_emi_high', 'w_health_ins', 'w_life_ins']
+PASS: moved to Money & goals
+Sliders visible on Money & goals: ['w_stepup']
+PASS: moved to Risk comfort
+PASS: moved to Review
+Review warnings/errors shown: ["Your emergency fund is short by about Rs 340,000 of its 10-month target. We'll top this up before investing the rest.", 'You reported no health insurance. Consider addressing this protection gap alongside your investment plan, especially with dependents to support.']
+PASS: moved to Results (final plan page)
+Metrics on results page: ['6.2/10', 'Rs 15,000/month', '2', 'Low', '7.7%', '3.7%', '0.32', '0.2%']
+Expanders present on results page: ['Why these risk numbers? (Appetite vs Capacity vs Required)', 'See the asset mix for each goal', 'View advanced risk analysis', 'Portfolio maintenance (rebalancing & reviews)', 'Assumptions & methodology']
+
+ALL APPTEST STEPS COMPLETED WITHOUT EXCEPTION.
+2026-10-04 15:17:12.238 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+Checkboxes with 0 dependents (expect NO w_sole): ['w_has_ret']
+Income label widget present: True
+Checkboxes with EMI=0 (expect NO w_emi_high): []
+Sliders with Lumpsum mode (expect NO w_stepup): []
+Review warnings (branch 2): ['You do not yet have an emergency fund. Based on your situation, aim for about 3 months of expenses in a liquid fund before taking market risk.']
+PASS: branch 2 (no dependents, lumpsum, student) reached Results cleanly.
+Metrics: ['2.4/10', 'Rs 50,000', '1', 'High', 'Rs 5,530', 'Rs 5,668', 'Rs 5,810', '6.3%']
